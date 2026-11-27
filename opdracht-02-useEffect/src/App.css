@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.dashboard {
+  width: min(100%, 720px);
+  margin: auto;
+  padding: clamp(1.5rem, 5vw, 3.25rem);
+  overflow: hidden;
+  border: 1px solid rgba(168, 190, 225, 0.16);
+  border-radius: 1.75rem;
+  background: rgba(15, 27, 47, 0.82);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+}
+
+.dashboard h1 {
+  margin: 0 0 2rem;
+  color: #f0f5ff;
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.clock {
+  width: fit-content;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.6rem;
+  border: 1px solid rgba(95, 231, 210, 0.22);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, rgba(22, 43, 62, 0.96), rgba(20, 35, 57, 0.96));
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px rgba(255, 255, 255, 0.07);
+  color: #7cebd5;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: clamp(2.4rem, 9vw, 4.25rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-shadow: 0 0 24px rgba(45, 212, 191, 0.28);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.pageTimer {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.25rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(168, 190, 225, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #b7c5d9;
+  font-size: 0.95rem;
+}
+
+.welcomeMessage {
+  margin: 0 0 1.25rem;
+  color: #f0f5ff;
+  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  letter-spacing: -0.025em;
+}
+
+.dayQuote {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid rgba(168, 190, 225, 0.12);
+  border-left: 3px solid #7cebd5;
+  border-radius: 0.4rem 1rem 1rem 0.4rem;
+  background: rgba(255, 255, 255, 0.045);
+  color: #c4d0e2;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    border-radius: 1.25rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .clock {
+    padding: 0.9rem 1rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
